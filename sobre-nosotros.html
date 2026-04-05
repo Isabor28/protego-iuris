@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Conoce a la Abg. Jessenia Alejandro Cárdenas y al estudio jurídico Protego Iuris en Santa Elena, Ecuador."/>
+  <title>Sobre Nosotros | Protego Iuris</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* ===== ABOGADA SECTION ===== */
+    .abogada-section {
+      padding: 100px 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+```
+.abogada-img-wrap {
+  position: relative;
+}
+
+.abogada-img-wrap img {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
+}
+
+.abogada-img-deco {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  right: 18px;
+  bottom: 18px;
+  border: 2px solid var(--gold);
+  opacity: 0.35;
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
+  z-index: -1;
+}
+
+.abogada-img-tag {
+  position: absolute;
+  bottom: 30px;
+  right: -20px;
+  background: var(--navy);
+  border-left: 4px solid var(--gold);
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.abogada-img-tag strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.abogada-img-tag span {
+  font-size: 0.75rem;
+  color: var(--gold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.abogada-content h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.abogada-content .cargo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.abogada-content p {
+  color: #4A5568;
+  margin-bottom: 1.2rem;
+  line-height: 1.9;
+}
+
+.abogada-datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.abogada-dato {
+  background: var(--off-white);
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--gold);
+}
+
+.abogada-dato label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.abogada-dato span {
+  font-size: 0.92rem;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+/* ===== VALORES ===== */
+.valores-section {
+  background: var(--navy);
+  padding: 100px 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.valores-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(201,160,48,0.07) 0%, transparent 60%);
+}
+
+.valores-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.valor-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border: 1px solid var(--border);
+  position: relative;
+  transition: all 0.4s;
+}
+
+.valor-card:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(201,160,48,0.4);
+  transform: translateY(-6px);
+}
+
+.valor-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, rgba(201,160,48,0.15), rgba(201,160,48,0.05));
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+
+.valor-card h3 {
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+
+.valor-card p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+}
+
+/* ===== MISIÓN VISIÓN ===== */
+.mision-section {
+  padding: 100px 2rem;
+  background: var(--off-white);
+}
+
+.mision-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.mision-card {
+  background: var(--white);
+  padding: 3rem;
+  border-top: 4px solid var(--gold);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.mision-card::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -16px;
+  left: 2rem;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+}
+
+.mision-card h3 {
+  font-size: 1.6rem;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+.mision-card p {
+  color: #4A5568;
+  line-height: 1.9;
+  font-size: 0.95rem;
+}
+
+/* ===== POR QUÉ ELEGIRNOS ===== */
+.porque-section {
+  padding: 100px 2rem;
+}
+
+.porque-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.porque-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.porque-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 2rem;
+  border: 1px solid #e8e0d0;
+  transition: all 0.3s;
+}
+
+.porque-item:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.porque-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.4;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 50px;
+}
+
+.porque-item h4 {
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.porque-item p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ===== CTA ===== */
+.cta-nosotros {
+  background: var(--navy);
+  padding: 80px 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-nosotros::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(201,160,48,0.08) 0%, transparent 70%);
+}
+
+.cta-nosotros h2 {
+  color: var(--white);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.cta-nosotros p {
+  color: rgba(255,255,255,0.65);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .abogada-section { grid-template-columns: 1fr; gap: 3rem; }
+  .abogada-img-tag { right: 0; }
+  .valores-grid { grid-template-columns: 1fr 1fr; }
+  .mision-inner { grid-template-columns: 1fr; }
+  .porque-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .valores-grid { grid-template-columns: 1fr; }
+  .abogada-datos { grid-template-columns: 1fr; }
+}
+```
+
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-brand">
+    <img src="logo.png" alt="Protego Iuris" class="nav-logo"/>
+    <div class="nav-brand-text">
+      <span class="nav-brand-name">PROTEGO IURIS</span>
+      <span class="nav-brand-tagline">Defensa Firme · Justicia Real</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="sobre-nosotros.html" class="active">Nosotros</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="https://wa.me/593981519917?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Protego%20Iuris." target="_blank" class="nav-cta">Consulta Gratis</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Inicio</a>
+  <a href="sobre-nosotros.html">Nosotros</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/593981519917?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Protego%20Iuris." target="_blank">💬 WhatsApp</a>
+</div>
+
+<!-- PAGE HEADER -->
+
+<div class="page-header">
+  <div class="page-header-ornament"></div>
+  <h1>Sobre Nosotros</h1>
+  <p>Conoce a la persona detrás de tu defensa legal</p>
+</div>
+
+<!-- ABOGADA -->
+
+<section class="abogada-section">
+  <div class="abogada-img-wrap">
+    <img src="foto-abogada.png" alt="Abg. Jessenia Alejandro Cárdenas — Protego Iuris"/>
+    <div class="abogada-img-deco"></div>
+    <div class="abogada-img-tag">
+      <strong>Abg. Jessenia Alejandro Cárdenas</strong>
+      <span>Fundadora · Protego Iuris</span>
+    </div>
+  </div>
+  <div class="abogada-content">
+    <span class="section-label">La abogada</span>
+    <h2>Abg. Jessenia Alejandro Cárdenas</h2>
+    <div class="gold-line"></div>
+    <p class="cargo">Abogada — Universidad Estatal Península de Santa Elena (UPSE)</p>
+    <p>La Abg. Jessenia Alejandro Cárdenas es la fundadora y directora de Protego Iuris, un estudio jurídico nacido con una misión clara: brindar acceso a una defensa legal de calidad a todas las personas y familias de la Península de Santa Elena.</p>
+    <p>Graduada de la Universidad Estatal Península de Santa Elena, Jessenia se ha especializado en las áreas del derecho que más impactan la vida cotidiana de las personas: civil, penal, laboral, familiar y mercantil. Su enfoque combina rigor profesional con una comunicación cercana y empática, asegurando que cada cliente entienda su caso en todo momento.</p>
+    <p>Con su estudio ubicado estratégicamente en Santa Elena, diagonal al Consejo de la Judicatura, Jessenia se ha posicionado como una referente legal de confianza en la región, destacándose por su honestidad, dedicación y compromiso con los resultados.</p>
+    <div class="abogada-datos">
+      <div class="abogada-dato">
+        <label>Formación</label>
+        <span>Universidad Estatal Península de Santa Elena — UPSE</span>
+      </div>
+      <div class="abogada-dato">
+        <label>Especialidad</label>
+        <span>Derecho Civil, Penal, Laboral, Familiar y Mercantil</span>
+      </div>
+      <div class="abogada-dato">
+        <label>Ubicación</label>
+        <span>Santa Elena, Ecuador</span>
+      </div>
+      <div class="abogada-dato">
+        <label>Atención</label>
+        <span>Lun–Vie 8:00–17:00 · Sáb 9:00–12:00</span>
+      </div>
+    </div>
+    <a href="https://wa.me/593981519917?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta%20con%20la%20Abg.%20Jessenia." target="_blank" class="btn-primary">💬 Agendar consulta</a>
+  </div>
+</section>
+
+<!-- VALORES -->
+
+<section class="valores-section">
+  <div class="valores-inner">
+    <div class="section-header">
+      <span class="section-label">Nuestros pilares</span>
+      <h2 style="color:var(--white);">Los valores que nos guían</h2>
+      <div class="gold-line center"></div>
+      <p style="color:rgba(255,255,255,0.6); font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1rem;">Cada decisión que tomamos en tu caso está respaldada por estos principios</p>
+    </div>
+    <div class="valores-grid">
+      <div class="valor-card">
+        <div class="valor-icon">🤝</div>
+        <h3>Honestidad</h3>
+        <p>No prometemos resultados imposibles. Te decimos la verdad sobre tu caso desde el primer momento, con claridad y respeto.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🛡️</div>
+        <h3>Compromiso</h3>
+        <p>Tu caso nos importa como si fuera propio. Trabajamos con dedicación total desde el inicio hasta la resolución final.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🗣️</div>
+        <h3>Comunicación clara</h3>
+        <p>Te explicamos cada paso en lenguaje que entiendas. Sin tecnicismos innecesarios, sin secretos, siempre informado.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">⚖️</div>
+        <h3>Justicia real</h3>
+        <p>Creemos que toda persona merece una defensa justa, independientemente de su situación económica o social.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🔒</div>
+        <h3>Confidencialidad</h3>
+        <p>Tu información y los detalles de tu caso están protegidos con total privacidad. La discreción es un principio irrenunciable.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🏡</div>
+        <h3>Cercanía local</h3>
+        <p>Conocemos la realidad de Santa Elena. Nuestra presencia local nos permite actuar con rapidez y entender el contexto de cada caso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISIÓN Y VISIÓN -->
+
+<section class="mision-section">
+  <div style="max-width:1100px; margin:0 auto 4rem; text-align:center;">
+    <span class="section-label">Identidad del estudio</span>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);">Misión y Visión</h2>
+    <div class="gold-line center"></div>
+  </div>
+  <div class="mision-inner">
+    <div class="mision-card" data-label="Misión">
+      <h3>Nuestra Misión</h3>
+      <p>Brindar asesoría y representación legal de calidad a personas y familias en Santa Elena, con honestidad, compromiso y un enfoque humano que garantice el acceso a la justicia de quienes más lo necesitan. Cada caso que tomamos representa una oportunidad de cambiar la vida de alguien para bien.</p>
+    </div>
+    <div class="mision-card" data-label="Visión">
+      <h3>Nuestra Visión</h3>
+      <p>Ser el estudio jurídico de referencia en la Provincia de Santa Elena, reconocido por la calidad de nuestra defensa legal, la confianza que generamos en nuestros clientes y nuestro aporte al fortalecimiento del Estado de Derecho en la región. Que cada persona que salga de nuestras instalaciones sienta que fue escuchada, representada y defendida.</p>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ ELEGIRNOS -->
+
+<section class="porque-section">
+  <div class="porque-inner">
+    <div style="text-align:center; margin-bottom:1rem;">
+      <span class="section-label">Nuestra diferencia</span>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);">¿Por qué elegir Protego Iuris?</h2>
+      <div class="gold-line center"></div>
+    </div>
+    <div class="porque-grid">
+      <div class="porque-item">
+        <div class="porque-num">01</div>
+        <div>
+          <h4>Atención personalizada, no masiva</h4>
+          <p>No somos una fábrica de casos. Cada cliente recibe la atención completa de la Abg. Jessenia, quien conoce tu caso de principio a fin.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <div class="porque-num">02</div>
+        <div>
+          <h4>Primera consulta sin costo</h4>
+          <p>Puedes contarnos tu situación sin compromiso. Te orientamos con total honestidad sobre si podemos ayudarte y cómo.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <div class="porque-num">03</div>
+        <div>
+          <h4>Respuesta rápida por WhatsApp</h4>
+          <p>Sabemos que los problemas legales no esperan. Respondemos consultas por WhatsApp con agilidad y sin burocracia.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <div class="porque-num">04</div>
+        <div>
+          <h4>Conocimiento local profundo</h4>
+          <p>Conocemos los juzgados, los procesos y la realidad jurídica de Santa Elena. Eso nos da ventaja real en tu defensa.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <div class="porque-num">05</div>
+        <div>
+          <h4>Enfoque en personas, no en trámites</h4>
+          <p>Nos interesa entender tu situación de vida, no solo los papeles. Eso nos permite darte la mejor estrategia legal posible.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <div class="porque-num">06</div>
+        <div>
+          <h4>Ubicación estratégica</h4>
+          <p>Estamos diagonal al Consejo de la Judicatura en Santa Elena. Eso nos permite actuar rápido cuando tu caso lo requiere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+
+<section class="cta-nosotros">
+  <span class="section-label" style="position:relative;">¿Lista para dar el paso?</span>
+  <h2>Hablemos sobre tu caso</h2>
+  <p>La primera consulta es completamente gratuita y sin compromiso.</p>
+  <a href="https://wa.me/593981519917?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta%20con%20la%20Abg.%20Jessenia%20Alejandro." target="_blank" class="btn-primary" style="position:relative;">💬 Escribir por WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Protego Iuris"/>
+      <p>Estudio jurídico comprometido con la defensa de tus derechos en Santa Elena, Ecuador.</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/protegoiuris" target="_blank">f</a>
+        <a href="https://instagram.com/protegoiuris" target="_blank">ig</a>
+        <a href="https://x.com/protegoiuris" target="_blank">𝕏</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <div class="footer-contact-item"><span>📍</span><span>Santa Elena, Ecuador<br/>Diagonal al Consejo de la Judicatura</span></div>
+      <div class="footer-contact-item"><span>📱</span><span>+593 98 151 9917</span></div>
+      <div class="footer-contact-item"><span>✉️</span><span>protegoiuris@gmail.com</span></div>
+      <div class="footer-contact-item"><span>🕐</span><span>Lun–Vie: 8:00–17:00 · Sáb: 9:00–12:00</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Protego Iuris · Todos los derechos reservados</span>
+    <span class="footer-tagline">Defensa Firme. Justicia Real.</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/593981519917?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Protego%20Iuris." target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Consulta gratis</span>
+</a>
+
+<script>
+  window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50); });
+  document.getElementById('navToggle').addEventListener('click', () => { document.getElementById('mobileMenu').classList.toggle('open'); });
+</script>
+
+</body>
+</html>
