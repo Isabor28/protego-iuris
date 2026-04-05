@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Servicios legales de Protego Iuris en Santa Elena — Derecho Civil, Penal, Laboral, Familiar y Mercantil."/>
+  <title>Servicios | Protego Iuris</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* ===== SERVICIOS INTRO ===== */
+    .servicios-intro {
+      padding: 80px 2rem;
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+```
+.servicios-intro h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 1rem;
+}
+
+.servicios-intro p {
+  color: #4A5568;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+/* ===== AREAS LEGALES ===== */
+.area-section {
+  padding: 80px 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 5rem;
+  align-items: start;
+  border-bottom: 1px solid #e8e0d0;
+}
+
+.area-section.reverse {
+  grid-template-columns: 1.4fr 1fr;
+}
+
+.area-section.reverse .area-visual {
+  order: -1;
+}
+
+.area-visual {
+  position: relative;
+}
+
+.area-icon-big {
+  width: 100%;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  aspect-ratio: 4/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.area-icon-big::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 30%, rgba(201,160,48,0.1) 0%, transparent 60%);
+}
+
+.area-icon-big .big-icon {
+  font-size: 4rem;
+  position: relative;
+}
+
+.area-icon-big .area-tag {
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  position: relative;
+}
+
+.area-badge {
+  position: absolute;
+  bottom: -12px;
+  right: 20px;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.area-content h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.area-content .area-subtitle {
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.area-content p {
+  color: #4A5568;
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+}
+
+.area-list {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.area-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f0ece4;
+  font-size: 0.92rem;
+  color: var(--navy);
+}
+
+.area-list li::before {
+  content: '▸';
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.area-alert {
+  background: var(--off-white);
+  border-left: 4px solid var(--gold);
+  padding: 1rem 1.4rem;
+  margin: 1.5rem 0;
+  font-size: 0.88rem;
+  color: var(--navy-mid);
+  font-style: italic;
+}
+
+/* ===== PROCESO ===== */
+.proceso-section {
+  background: var(--navy);
+  padding: 100px 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.proceso-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(201,160,48,0.07) 0%, transparent 70%);
+}
+
+.proceso-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.proceso-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin-top: 4rem;
+}
+
+.proceso-step {
+  background: var(--navy);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.proceso-step-num {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--navy);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+
+.proceso-step h4 {
+  font-size: 1rem;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.proceso-step p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+
+/* ===== FAQ ===== */
+.faq-section {
+  padding: 100px 2rem;
+  background: var(--off-white);
+}
+
+.faq-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid #e8e0d0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 1.8rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--navy);
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.faq-question:hover {
+  background: var(--off-white);
+}
+
+.faq-question span {
+  font-size: 1.2rem;
+  color: var(--gold);
+  transition: transform 0.3s;
+  font-weight: 300;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+  padding: 0 1.8rem;
+  font-size: 0.9rem;
+  color: #4A5568;
+  line-height: 1.8;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  padding: 0 1.8rem 1.5rem;
+}
+
+.faq-item.open .faq-question span {
+  transform: rotate(45deg);
+}
+
+.faq-item.open .faq-question {
+  color: var(--gold);
+  border-bottom: 1px solid #e8e0d0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .area-section, .area-section.reverse { grid-template-columns: 1fr; gap: 2rem; }
+  .area-section.reverse .area-visual { order: 0; }
+  .proceso-steps { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .proceso-steps { grid-template-columns: 1fr; }
+}
+```
+
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-brand">
+    <img src="logo.png" alt="Protego Iuris" class="nav-logo"/>
+    <div class="nav-brand-text">
+      <span class="nav-brand-name">PROTEGO IURIS</span>
+      <span class="nav-brand-tagline">Defensa Firme · Justicia Real</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+    <li><a href="servicios.html" class="active">Servicios</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="https://wa.me/593981519917?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Protego%20Iuris." target="_blank" class="nav-cta">Consulta Gratis</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Inicio</a>
+  <a href="sobre-nosotros.html">Nosotros</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/593981519917?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Protego%20Iuris." target="_blank">💬 WhatsApp</a>
+</div>
+
+<!-- PAGE HEADER -->
+
+<div class="page-header">
+  <div class="page-header-ornament"></div>
+  <h1>Nuestros Servicios</h1>
+  <p>Asesoría legal en las áreas que más importan para tu vida y tu familia</p>
+</div>
+
+<!-- INTRO -->
+
+<div class="servicios-intro">
+  <span class="section-label">¿En qué podemos ayudarte?</span>
+  <h2>Soluciones legales reales para personas reales</h2>
+  <div class="gold-line center"></div>
+  <p>En Protego Iuris sabemos que cada problema legal es diferente. Por eso, la Abg. Jessenia Alejandro Cárdenas analiza tu caso de manera individual y te ofrece la estrategia más adecuada, siempre con honestidad y claridad.</p>
+</div>
+
+<!-- ===== DERECHO CIVIL ===== -->
+
+<section class="area-section" id="civil">
+  <div class="area-visual">
+    <div class="area-icon-big">
+      <span class="big-icon">📜</span>
+      <span class="area-tag">Derecho Civil</span>
+    </div>
+    <div class="area-badge">Contratos · Propiedades · Deudas</div>
+  </div>
+  <div class="area-content">
+    <span class="area-subtitle">Área 01</span>
+    <h2>Derecho Civil</h2>
+    <div class="gold-line"></div>
+    <p>El Derecho Civil regula las relaciones entre personas: contratos, propiedad, herencias, deudas y responsabilidades. Cuando estas relaciones se rompen o generan conflictos, necesitas una defensa firme.</p>
+    <p>Te acompañamos en todo proceso civil, desde la redacción de un contrato hasta la representación en juicio por incumplimiento o daños.</p>
+    <ul class="area-list">
+      <li>Redacción y revisión de contratos</li>
+      <li>Cobro judicial y extrajudicial de deudas</li>
+      <li>Herencias, sucesiones y partición de bienes</li>
+      <li>Compraventa de bienes inmuebles</li>
+      <li>Responsabilidad civil y daños y perjuicios</li>
+      <li>Prescripción de deudas y bienes</li>
+      <li>Posesión efectiva y títulos de propiedad</li>
+    </ul>
+    <div class="area-alert">¿Te deben dinero o tienes un contrato incumplido? No esperes más — el tiempo puede jugar en tu contra.</div>
+    <a href="https://wa.me/593981519917?text=Hola%2C%20necesito%20asesor%C3%ADa%20en%20Derecho%20Civil." target="_blank" class="btn-primary">💬 Consultar sobre mi caso</a>
+  </div>
+</section>
+
+<!-- ===== DERECHO PENAL ===== -->
+
+<section class="area-section reverse" id="penal">
+  <div class="area-content">
+    <span class="area-subtitle">Área 02</span>
+    <h2>Derecho Penal</h2>
+    <div class="gold-line"></div>
+    <p>Enfrentar una acusación penal es una de las situaciones más estresantes que puede vivir una persona o su familia. La Abg. Jessenia Alejandro te brinda una defensa técnica, oportuna y enfocada en proteger tus garantías constitucionales.</p>
+    <p>Ya sea que estés siendo investigado, procesado o que un familiar haya sido detenido, actuamos de inmediato para garantizar que tus derechos sean respetados.</p>
+    <ul class="area-list">
+      <li>Defensa en audiencias de flagrancia y formulación de cargos</li>
+      <li>Representación en juicio oral y público</li>
+      <li>Recursos de apelación y casación</li>
+      <li>Acusación particular por delitos contra ti</li>
+      <li>Delitos contra la propiedad: robo, estafa, apropiación ilícita</li>
+      <li>Delitos de tránsito con resultado de muerte o lesiones</li>
+      <li>Violencia intrafamiliar y delitos sexuales</li>
+    </ul>
+    <div class="area-alert">Si tú o un familiar están detenidos, contáctanos de inmediato. El tiempo en materia penal es crítico.</div>
+    <a href="https://wa.me/593981519917?text=Hola%2C%20necesito%20asesor%C3%ADa%20urgente%20en%20Derecho%20Penal." target="_blank" class="btn-primary">💬 Asesoría urgente</a>
+  </div>
+  <div class="area-visual">
+    <div class="area-icon-big">
+      <span class="big-icon">🛡️</span>
+      <span class="area-tag">Derecho Penal</span>
+    </div>
+    <div class="area-badge">Defensa · Representación · Apelación</div>
+  </div>
+</section>
+
+<!-- ===== DERECHO LABORAL ===== -->
+
+<section class="area-section" id="laboral">
+  <div class="area-visual">
+    <div class="area-icon-big">
+      <span class="big-icon">👷</span>
+      <span class="area-tag">Derecho Laboral</span>
+    </div>
+    <div class="area-badge">Despidos · Liquidaciones · Beneficios</div>
+  </div>
+  <div class="area-content">
+    <span class="area-subtitle">Área 03</span>
+    <h2>Derecho Laboral</h2>
+    <div class="gold-line"></div>
+    <p>El trabajo es la base del sustento familiar. Cuando un empleador vulnera tus derechos — sea con un despido injustificado, no pagando lo que corresponde, o creando un ambiente hostil — tienes todo el derecho de reclamar.</p>
+    <p>Te ayudamos a reclamar lo que es tuyo de manera ágil, con claridad y con la fuerza del Código del Trabajo ecuatoriano a tu favor.</p>
+    <ul class="area-list">
+      <li>Despido intempestivo y cálculo de indemnizaciones</li>
+      <li>Reclamo de décimos, utilidades y vacaciones</li>
+      <li>Afiliación al IESS y deudas patronales</li>
+      <li>Acoso laboral y despido por discriminación</li>
+      <li>Visto bueno y abandono de trabajo</li>
+      <li>Contratos de trabajo y su legalidad</li>
+      <li>Reclamaciones ante el Ministerio de Trabajo</li>
+    </ul>
+    <div class="area-alert">¿Te despidieron sin causa o sin pagarte lo que te corresponde? Tienes plazo para reclamar — no pierdas tiempo.</div>
+    <a href="https://wa.me/593981519917?text=Hola%2C%20me%20despidieron%20y%20necesito%20asesor%C3%ADa%20laboral." target="_blank" class="btn-primary">💬 Reclamar mis derechos</a>
+  </div>
+</section>
+
+<!-- ===== DERECHO FAMILIAR ===== -->
+
+<section class="area-section reverse" id="familiar">
+  <div class="area-content">
+    <span class="area-subtitle">Área 04</span>
+    <h2>Derecho de Familia</h2>
+    <div class="gold-line"></div>
+    <p>Los procesos familiares son los más delicados porque afectan a quienes más quieres. La Abg. Jessenia los maneja con sensibilidad, profesionalismo y siempre teniendo como prioridad el bienestar de los niños y de la familia.</p>
+    <p>Ya sea un divorcio, la tenencia de tus hijos o el reclamo de pensiones alimenticias, estamos aquí para guiarte con claridad y firmeza.</p>
+    <ul class="area-list">
+      <li>Divorcio por mutuo acuerdo y contencioso</li>
+      <li>Tenencia y custodia de hijos</li>
+      <li>Pensiones alimenticias (fijación, aumento y reducción)</li>
+      <li>Régimen de visitas</li>
+      <li>Reconocimiento de paternidad</li>
+      <li>Adopciones nacionales</li>
+      <li>Violencia intrafamiliar: medidas de protección</li>
+    </ul>
+    <div class="area-alert">En materia de familia, los acuerdos extrajudiciales bien redactados pueden evitar largos procesos. Consúltanos primero.</div>
+    <a href="https://wa.me/593981519917?text=Hola%2C%20necesito%20asesor%C3%ADa%20en%20Derecho%20de%20Familia." target="_blank" class="btn-primary">💬 Consultar mi situación</a>
+  </div>
+  <div class="area-visual">
+    <div class="area-icon-big">
+      <span class="big-icon">👨‍👩‍👧</span>
+      <span class="area-tag">Derecho de Familia</span>
+    </div>
+    <div class="area-badge">Divorcios · Custodia · Pensiones</div>
+  </div>
+</section>
+
+<!-- ===== DERECHO MERCANTIL ===== -->
+
+<section class="area-section" id="mercantil">
+  <div class="area-visual">
+    <div class="area-icon-big">
+      <span class="big-icon">🏢</span>
+      <span class="area-tag">Derecho Mercantil</span>
+    </div>
+    <div class="area-badge">Empresas · Contratos · Comercio</div>
+  </div>
+  <div class="area-content">
+    <span class="area-subtitle">Área 05</span>
+    <h2>Derecho Mercantil y Empresarial</h2>
+    <div class="gold-line"></div>
+    <p>Si tienes un negocio o quieres emprender, contar con asesoría jurídica desde el inicio puede ahorrarte muchos problemas en el futuro. Te ayudamos a construir tu empresa sobre bases legales sólidas.</p>
+    <p>También representamos a emprendedores y pequeñas empresas en conflictos comerciales, cobranzas y renegociación de contratos.</p>
+    <ul class="area-list">
+      <li>Constitución de compañías (S.A., Cía. Ltda., SAS)</li>
+      <li>Contratos comerciales y de distribución</li>
+      <li>Cobro de facturas y deudas comerciales</li>
+      <li>Resolución de conflictos entre socios</li>
+      <li>Protección de marcas y nombres comerciales</li>
+      <li>Contratos de arrendamiento comercial</li>
+      <li>Asesoría legal preventiva para negocios</li>
+    </ul>
+    <div class="area-alert">Antes de firmar cualquier contrato comercial, haz que un abogado lo revise. Es la mejor inversión para tu negocio.</div>
+    <a href="https://wa.me/593981519917?text=Hola%2C%20necesito%20asesor%C3%ADa%20mercantil%20para%20mi%20negocio." target="_blank" class="btn-primary">💬 Proteger mi negocio</a>
+  </div>
+</section>
+
+<!-- PROCESO -->
+
+<section class="proceso-section">
+  <div class="proceso-inner">
+    <div class="section-header">
+      <span class="section-label">Cómo trabajamos</span>
+      <h2 style="color:var(--white);">Tu proceso legal, paso a paso</h2>
+      <div class="gold-line center"></div>
+      <p style="color:rgba(255,255,255,0.6); font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1rem;">Transparencia en cada etapa de tu caso</p>
+    </div>
+    <div class="proceso-steps">
+      <div class="proceso-step">
+        <div class="proceso-step-num">1</div>
+        <h4>Consulta inicial</h4>
+        <p>Nos cuentas tu situación sin costo ni compromiso. Escuchamos con atención y te damos una primera orientación honesta.</p>
+      </div>
+      <div class="proceso-step">
+        <div class="proceso-step-num">2</div>
+        <h4>Análisis del caso</h4>
+        <p>Revisamos documentos, antecedentes y estrategia legal más conveniente para tu situación específica.</p>
+      </div>
+      <div class="proceso-step">
+        <div class="proceso-step-num">3</div>
+        <h4>Propuesta y acuerdo</h4>
+        <p>Te presentamos nuestra propuesta de honorarios y plan de acción. Sin sorpresas ni costos ocultos.</p>
+      </div>
+      <div class="proceso-step">
+        <div class="proceso-step-num">4</div>
+        <h4>Defensa y seguimiento</h4>
+        <p>Actuamos y te mantenemos informado en todo momento hasta la resolución de tu caso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+
+<section class="faq-section">
+  <div class="faq-inner">
+    <div style="text-align:center; margin-bottom:3rem;">
+      <span class="section-label">Preguntas frecuentes</span>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.4rem);">Lo que más nos preguntan</h2>
+      <div class="gold-line center"></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">¿La primera consulta realmente es gratis? <span>+</span></div>
+      <div class="faq-answer">Sí, completamente. La primera consulta no tiene ningún costo. Puedes contarnos tu situación por WhatsApp, correo o en persona, y te orientamos con total honestidad sobre tu caso.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">¿Cuánto tiempo tarda un proceso legal? <span>+</span></div>
+      <div class="faq-answer">Depende del tipo de caso. Un divorcio por mutuo acuerdo puede resolverse en semanas, mientras que un juicio penal puede durar meses. Te daremos un estimado realista desde el inicio para que puedas tomar decisiones informadas.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">¿Puedo contactarles por WhatsApp para mi caso? <span>+</span></div>
+      <div class="faq-answer">Por supuesto. El WhatsApp es nuestro canal principal de contacto. Puedes escribirnos al +593 98 151 9917 en cualquier momento y te responderemos lo antes posible, dentro del horario de atención.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">¿Atienden casos fuera de Santa Elena? <span>+</span></div>
+      <div class="faq-answer">Principalmente atendemos casos en la Provincia de Santa Elena. Sin embargo, dependiendo del tipo de proceso, podemos asesorarte para casos en otras provincias. Consúltanos directamente.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">¿Cómo sé si mi caso tiene solución legal? <span>+</span></div>
+      <div class="faq-answer">Muchas personas llegan creyendo que su situación no tiene solución, cuando en realidad sí la tiene. Y otras veces es lo contrario. Por eso, la consulta inicial es clave: te decimos la verdad con claridad, sin darte falsas esperanzas.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">¿Mis datos e información están protegidos? <span>+</span></div>
+      <div class="faq-answer">Absolutamente. La confidencialidad es un principio fundamental de la profesión legal y de Protego Iuris. Todo lo que nos cuentes queda entre tú y la abogada, siempre.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Protego Iuris"/>
+      <p>Estudio jurídico comprometido con la defensa de tus derechos en Santa Elena, Ecuador.</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/protegoiuris" target="_blank">f</a>
+        <a href="https://instagram.com/protegoiuris" target="_blank">ig</a>
+        <a href="https://x.com/protegoiuris" target="_blank">𝕏</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <div class="footer-contact-item"><span>📍</span><span>Santa Elena, Ecuador<br/>Diagonal al Consejo de la Judicatura</span></div>
+      <div class="footer-contact-item"><span>📱</span><span>+593 98 151 9917</span></div>
+      <div class="footer-contact-item"><span>✉️</span><span>protegoiuris@gmail.com</span></div>
+      <div class="footer-contact-item"><span>🕐</span><span>Lun–Vie: 8:00–17:00 · Sáb: 9:00–12:00</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Protego Iuris · Todos los derechos reservados</span>
+    <span class="footer-tagline">Defensa Firme. Justicia Real.</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/593981519917?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Protego%20Iuris." target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Consulta gratis</span>
+</a>
+
+<script>
+  window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50); });
+  document.getElementById('navToggle').addEventListener('click', () => { document.getElementById('mobileMenu').classList.toggle('open'); });
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
