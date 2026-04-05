@@ -1,2 +1,0 @@
-# protego-iuris
-Estudio jurídico
